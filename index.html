@@ -15,12 +15,12 @@ margin:0;
 header{
 background:#2196F3;
 color:white;
-padding:25px;
+padding:30px;
 text-align:center;
 }
 
 .container{
-max-width:800px;
+max-width:900px;
 margin:auto;
 padding:20px;
 }
@@ -28,8 +28,9 @@ padding:20px;
 .card{
 background:white;
 padding:20px;
-border-radius:12px;
+border-radius:15px;
 box-shadow:0 2px 10px rgba(0,0,0,.1);
+margin-bottom:20px;
 }
 
 input,select,button{
@@ -47,20 +48,21 @@ background:#2196F3;
 color:white;
 border:none;
 cursor:pointer;
+font-size:16px;
 }
 
 button:hover{
 opacity:.9;
 }
 
-footer{
-text-align:center;
-padding:20px;
-color:#666;
+.paciente{
+padding:10px;
+border-left:4px solid #2196F3;
+margin-bottom:10px;
+background:#f8fbff;
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -71,46 +73,62 @@ color:#666;
 </header>
 
 <div class="container">
+
 <div class="card">
+<h2>📅 Agendar Consulta</h2>
 
-<h2>Agendar Consulta</h2>
-
-<input type="text" placeholder="Nome Completo">
-
-<input type="tel" placeholder="Telefone">
-
+<input id="nome" placeholder="Nome do paciente">
+<input id="telefone" placeholder="Telefone">
 <input type="date">
 
 <select>
 <option>08:00</option>
-<option>08:30</option>
 <option>09:00</option>
-<option>09:30</option>
 <option>10:00</option>
-<option>10:30</option>
 <option>11:00</option>
 <option>13:30</option>
-<option>14:00</option>
 <option>14:30</option>
-<option>15:00</option>
 <option>15:30</option>
-<option>16:00</option>
 <option>16:30</option>
-<option>17:00</option>
 <option>17:30</option>
-<option>18:00</option>
 <option>18:30</option>
-<option>19:00</option>
 </select>
 
-<button>Agendar</button>
-
-</div>
+<button onclick="agendar()">Agendar</button>
 </div>
 
-<footer>
-© 2026 Cia do Sorriso
-</footer>
+<div class="card">
+<h2>👨‍⚕️ Painel do Dentista</h2>
+
+<div class="paciente">
+<strong>08:00 - João Silva</strong><br>
+📞 (42) 99999-9999
+</div>
+
+<div class="paciente">
+<strong>09:30 - Maria Souza</strong><br>
+📞 (42) 98888-8888
+</div>
+
+<div class="paciente">
+<strong>14:00 - Pedro Lima</strong><br>
+📞 (42) 97777-7777
+</div>
+
+</div>
+
+</div>
+
+<script>
+function agendar(){
+alert("✅ Agendamento realizado com sucesso!");
+
+window.open(
+"https://wa.me/5542991187711?text=Olá! Acabei de realizar um agendamento pelo site da Cia do Sorriso.",
+"_blank"
+);
+}
+</script>
 
 </body>
 </html>
