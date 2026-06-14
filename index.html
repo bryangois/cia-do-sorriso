@@ -6,115 +6,122 @@
 <title>Cia do Sorriso</title>
 
 <style>
-body{
-font-family:Arial,sans-serif;
-background:#f4f8fb;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-header{
-background:#2196F3;
-color:white;
-padding:30px;
-text-align:center;
+body{
+background:linear-gradient(135deg,#2196F3,#64B5F6);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
 
 .container{
-max-width:900px;
-margin:auto;
-padding:20px;
+background:white;
+width:100%;
+max-width:500px;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-.card{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
+.logo{
+text-align:center;
 margin-bottom:20px;
 }
 
-input,select,button{
-width:100%;
-padding:12px;
-margin-top:8px;
-margin-bottom:12px;
-border-radius:8px;
-border:1px solid #ccc;
-box-sizing:border-box;
+.logo h1{
+color:#2196F3;
+font-size:32px;
 }
 
-button{
-background:#2196F3;
-color:white;
-border:none;
-cursor:pointer;
+.logo p{
+color:#666;
+margin-top:5px;
+}
+
+input,select{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:1px solid #ddd;
+border-radius:12px;
 font-size:16px;
 }
 
-button:hover{
-opacity:.9;
+button{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:12px;
+background:#2196F3;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
 }
 
-.paciente{
-padding:10px;
-border-left:4px solid #2196F3;
-margin-bottom:10px;
-background:#f8fbff;
+button:hover{
+transform:scale(1.03);
+}
+
+.info{
+margin-top:20px;
+text-align:center;
+color:#555;
 }
 </style>
 </head>
-<body>
 
-<header>
-<h1>🦷 Cia do Sorriso</h1>
-<h3>Dr. Leandro Skovran</h3>
-<p>Ponta Grossa - PR</p>
-<p>📞 (42) 99118-7711</p>
-</header>
+<body>
 
 <div class="container">
 
-<div class="card">
-<h2>📅 Agendar Consulta</h2>
+<div class="logo">
+<h1>🦷 Cia do Sorriso</h1>
+<p>Dr. Leandro Skovran</p>
+</div>
 
-<input id="nome" placeholder="Nome do paciente">
-<input id="telefone" placeholder="Telefone">
+<input type="text" placeholder="Nome Completo">
+
+<input type="tel" placeholder="Telefone">
+
 <input type="date">
 
 <select>
 <option>08:00</option>
+<option>08:30</option>
 <option>09:00</option>
+<option>09:30</option>
 <option>10:00</option>
+<option>10:30</option>
 <option>11:00</option>
 <option>13:30</option>
+<option>14:00</option>
 <option>14:30</option>
+<option>15:00</option>
 <option>15:30</option>
+<option>16:00</option>
 <option>16:30</option>
+<option>17:00</option>
 <option>17:30</option>
+<option>18:00</option>
 <option>18:30</option>
+<option>19:00</option>
 </select>
 
-<button onclick="agendar()">Agendar</button>
-</div>
+<button onclick="agendar()">Agendar Consulta</button>
 
-<div class="card">
-<h2>👨‍⚕️ Painel do Dentista</h2>
-
-<div class="paciente">
-<strong>08:00 - João Silva</strong><br>
-📞 (42) 99999-9999
-</div>
-
-<div class="paciente">
-<strong>09:30 - Maria Souza</strong><br>
-📞 (42) 98888-8888
-</div>
-
-<div class="paciente">
-<strong>14:00 - Pedro Lima</strong><br>
-📞 (42) 97777-7777
-</div>
-
+<div class="info">
+📍 Ponta Grossa - PR<br>
+📞 (42) 99118-7711
 </div>
 
 </div>
@@ -124,7 +131,7 @@ function agendar(){
 alert("✅ Agendamento realizado com sucesso!");
 
 window.open(
-"https://wa.me/5542991187711?text=Olá! Acabei de realizar um agendamento pelo site da Cia do Sorriso.",
+"https://wa.me/5542991187711",
 "_blank"
 );
 }
